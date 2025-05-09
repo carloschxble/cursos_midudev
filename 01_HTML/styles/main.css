@@ -1,0 +1,35 @@
+h1 {
+    color: #09f;
+}
+
+body {
+    background-color: #dbfbff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+}
+
+.description {
+    border: 1px solid red;
+}
+
+/* Centrar un modal */
+.centrarUnModal {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+}
+
+.displayFlex {
+    flex-flow: row nowrap;
+}
+
+.contenedorHijo {
+    flex-grow: 0; /* Los elementos no crecen */
+    flex-shrink: 1; /* Los elementos pueden reducir su tamaño */
+    flex-basis: auto; /* El tamaño base de los elementos es el tamaño de su contenido */
+
+    flex: 1; /* flex-grow, flex-shrink, flex-basis */
+
+    order: 1; /* El orden de los elementos */
+}

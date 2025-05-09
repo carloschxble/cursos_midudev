@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <!-- Codificación de caracteres -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- Compatibilidad con IE (legacy) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Viewport para diseño responsive -->
+
+        <title>
+            Portfolio de Midudev - Ingeniero de Software con 15 años de
+            experiencia
+        </title>
+        <!-- Título del sitio -->
+
+        <!-- SEO -->
+        <meta
+            name="description"
+            content="Portfolio de midudev, 15 años de experiencia como ingeniero de software"
+        />
+        <!-- Descripción corta para SEO -->
+        <meta name="keywords" content="Portfolio, Midudev, Software" />
+        <!-- Palabras clave (menos usado hoy, pero útil en algunos motores) -->
+        <meta name="author" content="Carlos Chablé" />
+        <!-- Autor del sitio -->
+        <meta name="robots" content="index, follow" />
+        <!-- Indica que el contenido de la pagina es indexable y que se puede seguir -->
+
+        <!-- Theme color: claro y oscuro -->
+        <meta
+            name="theme-color"
+            media="(prefers-color-scheme: light)"
+            content="#09f"
+        />
+        <meta
+            name="theme-color"
+            media="(prefers-color-scheme: dark)"
+            content="#003366"
+        />
+        <meta name="theme-color" content="#09f" />
+        <!-- fallback -->
+
+        <!-- Open Graph (para compartir en redes sociales) -->
+        <meta
+            property="og:title"
+            content="Portfolio de un ingeniero de software"
+        />
+        <!-- Titulo de la pagina -->
+        <meta
+            property="og:description"
+            content="Portfolio de midudev, 15 años de experiencia como ingeniero de software"
+        />
+        <!-- Descripcion de la pagina -->
+        <meta property="og:image" content="./images/yo.jpg" />
+        <!-- Imagen de la pagina -->
+        <meta
+            property="og:image:alt"
+            content="Una fotografía de un extraño viendo al horizonte"
+        />
+        <!-- Descripcion de la imagen -->
+        <meta property="og:url" content="https://tusitio.com" />
+        <meta property="og:type" content="website" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Título para Twitter" />
+        <meta name="twitter:description" content="Descripción para Twitter." />
+        <meta
+            name="twitter:image"
+            content="https://tusitio.com/imagen-twitter.jpg"
+        />
+
+        <!-- SEO -->
+        <link rel="alternate" href="https://midu.dev/en" hreflang="en-GB" />
+        <!-- Enlace alternativo para el idioma ingles -->
+        <link rel="canonical" href="https://midu.dev" />
+        <!-- Enlace canonico -->
+
+        <!-- Favicon -->
+        <link rel="icon" href="./images/yo.jpg" type="image/jpg" />
+        <!-- Icono de la pagina -->
+
+        <!-- Fuente web (ejemplo: Inter desde Google Fonts) -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- CSS principal -->
+        <link rel="stylesheet" href="./styles/main.css" />
+
+        <!-- Manifest para apps web progresivas (PWA) -->
+        <link rel="manifest" href="/site.webmanifest" />
+    </head>
+    <body>
+        <header>
+            <h1>Portfolio de Midudev</h1>
+
+            <!-- <iframe
+                width="100%" 
+                style="aspect-ratio: 16/9;" 
+                src="https://www.youtube.com/embed/ni2l3AzDDP8?si=mGw-_AtZigQKlqJ1" 
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe> -->
+
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <a class="link" href="#experiencia">Experiencia</a>
+                    <!-- Enlace interno a la seccion de experiencia -->
+                    <a class="link" href="#proyectos">Proyectos</a>
+                    <a
+                        class="link"
+                        href="https://twitch.tv/midudev"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        Twitch
+                    </a>
+                    <!-- Enlace externo a Twitch -->
+                </ul>
+            </nav>
+        </header>
+
+        <dialog id="myModal" closedby="any">
+            <h1>¿Sabías que puedes abrir un modal así?</h1>
+            <p>¡Y es totalmente nativo!</p>
+
+            <form method="dialog">
+                <button>Cerrar modal</button>
+            </form>
+        </dialog>
+
+        <button id="show" aria-controls="myModal" aria-haspopup="dialog">
+            Ver más información
+        </button>
+
+        <script>
+            document.getElementById("show").addEventListener("click", () => {
+                document.getElementById("myModal").showModal();
+            });
+        </script>
+
+        <main>
+            <p class="description">
+                +15 años de experiencia como
+                <strong>Ingeniero de Software</strong>. Creador y divulgador de
+                programación.
+            </p>
+
+            <h2 id="experiencia">Experiencia</h2>
+
+            <dl>
+                <dt>Adevnita</dt>
+                <dd>2022</dd>
+
+                <dt>Hubii</dt>
+                <dd>2020</dd>
+
+                <dt>Nacencia</dt>
+                <dd>2015</dd>
+            </dl>
+            <ul>
+                <li class="list-item">Adevnita - 2022</li>
+                <li class="list-item">Hubii - 2020</li>
+                <li class="list-item">Nacencia - 2015</li>
+            </ul>
+
+            <a href="./images/yo.jpg" download>
+                <img
+                    id="photo-image"
+                    src="./images/yo.jpg"
+                    alt="Una fotografía de un extraño viendo al horizonte"
+                    title="Foto de un random"
+                    width="300"
+                    height="300"
+                />
+            </a>
+
+            <h2 id="proyectos">Proyectos realizados</h2>
+
+            <aside>
+                <header>
+                    <h2>Mis tecnologías <span>favoritas</span></h2>
+                </header>
+                <ol type="1" reversed start="10">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Node.js</li>
+                </ol>
+            </aside>
+
+            <button>Haz click aquí</button>
+
+            <section>
+                <article>
+                    <header>
+                        <h4>La página de Tesla</h4>
+                        <img
+                            src="./images/tesla.png"
+                            alt="Captura de la página de Tesla"
+                            loading="lazy"
+                            width="100%"
+                            style="aspect-ratio: 239/116"
+                        />
+                    </header>
+                    <p>
+                        Elon Musk me llamó e hice en una tarde esta página desde
+                        cero.
+                    </p>
+                    <footer>
+                        <small>
+                            Tecnologías utilizadas: HTML, CSS, JavaScript
+                        </small>
+                    </footer>
+                </article>
+                <article>
+                    <header>
+                        <h4>Sitio Web Corporativo</h4>
+                    </header>
+                    <p>
+                        Desarrollo de un sitio web corporativo con una interfaz
+                        amigable y moderna.
+                    </p>
+                    <footer>
+                        <small>
+                            Tecnologías utilizadas: HTML, CSS, JavaScript
+                        </small>
+                    </footer>
+                </article>
+                <article>
+                    <header>
+                        <h4>Sitio Web Corporativo</h4>
+                    </header>
+                    <p>
+                        Desarrollo de un sitio web corporativo con una interfaz
+                        amigable y moderna.
+                    </p>
+                    <footer>
+                        <small>
+                            Tecnologías utilizadas: HTML, CSS, JavaScript
+                        </small>
+                    </footer>
+                </article>
+            </section>
+
+            <section>
+                <h2>Preguntas frecuentes</h2>
+
+                <details>
+                    <summary>¿Qué estudios tienes?</summary>
+                    <p>
+                        Estudie en la universidad de Vilanova una Ingeniería de
+                        Informatica durante 5 años.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>¿Cuáles son tus hobbies?</summary>
+                    <p>
+                        Me gusta mucho el deporte, sobre todo el fútbol y el
+                        baloncesto. También me gusta mucho la música, sobre todo
+                        el rock.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>¿Qué es lo que más te motiva?</summary>
+                    <p>
+                        Me motiva aprender cosas nuevas y poder enseñar a otros.
+                    </p>
+                </details>
+            </section>
+
+            <section>
+                <h2>Formulario de contacto</h2>
+
+                <form action="/" method="post">
+                    <fieldset>
+                        <legend>Información personal</legend>
+
+                        <div>
+                            <label for="name">
+                                Nombre:
+                                <input
+                                    type="text"
+                                    name="name"
+                                    placeholder="Miguel Ángel"
+                                    required
+                                />
+                            </label>
+                        </div>
+
+                        <label for="email">
+                            Email:
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="midudev@gmail.com"
+                                required
+                            />
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Información adicional</legend>
+
+                        <div>
+                            <label>
+                                Teléfono:
+                                <input
+                                    type="tel"
+                                    name="phone"
+                                    placeholder="+54 933 000 0000"
+                                    required
+                                />
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Otros</legend>
+
+                        <div>
+                            <label for="why"
+                                >¿Por qué quieres contactar conmigo?</label
+                            >
+                            <select name="why" id="why">
+                                <option value="1">Trabajo</option>
+                                <option value="2">Duda</option>
+                                <option value="3">Más información</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="terms">¿Aceptas los términos?</label>
+                            <input
+                                type="checkbox"
+                                id="terms"
+                                name="terms"
+                                required
+                            />
+                        </div>
+
+                        <div>
+                            <datalist id="languages">
+                                <option value="JavaScript"></option>
+                                <option value="Python"></option>
+                                <option value="Java"></option>
+                                <option value="C#"></option>
+                            </datalist>
+                            <label for="">
+                                ¿Con qué lenguaje quieres que te ayude?
+                                <input list="languages" name="languages" />
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <button>Enviar contacto</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <address>
+                <ul>
+                    <li>
+                        📍 Dirección: Calle Ficticia 123, Ciudad Ejemplo, País
+                    </li>
+                    <li>
+                        📞 Teléfono:
+                        <a href="tel:+521234567890">+52 123 456 7890</a>
+                    </li>
+                    <li>
+                        📧 Correo:
+                        <a href="mailto:contacto@tusitio.com"
+                            >contacto@tusitio.com</a
+                        >
+                    </li>
+                </ul>
+            </address>
+
+            <p>&copy; 2025 Tu Empresa. Todos los derechos reservados.</p>
+        </footer>
+    </body>
+</html>
