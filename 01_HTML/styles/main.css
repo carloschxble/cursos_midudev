@@ -33,3 +33,11 @@ body {
 
     order: 1; /* El orden de los elementos */
 }
+
+.gridResponsive {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(200px, 1fr)
+    );
+}

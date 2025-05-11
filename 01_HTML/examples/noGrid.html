@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Fixed Layout</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      height: 60px;
+      background-color: lightseagreen;
+      z-index: 10;
+    }
+
+    aside {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 60px;
+      height: calc(100vh - 60px);
+      background-color: lightcoral;
+      transition: width 0.3s ease;
+      z-index: 5;
+    }
+
+    aside:hover {
+      width: 200px;
+    }
+
+    main {
+      margin-left: 60px;
+      padding: 20px;
+      background-color: lightslategray;
+      min-height: 100vh;
+      transition: margin-left 0.3s ease;
+    }
+
+    aside:hover ~ main {
+      margin-left: 200px;
+    }
+
+    article {
+      background-color: burlywood;
+      margin-bottom: 20px;
+      height: 100px;
+    }
+
+    .menu-toggle {
+        display:none;
+    }
+
+    /* Responsive layout */
+    @media (max-width: 768px) {
+      aside {
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        transition: left 0.3s ease;
+      }
+
+      aside.open {
+        left: 0;
+      }
+
+      main {
+        margin-left: 0;
+        padding-top: 80px;
+      }
+
+      main.dimmed {
+        filter: brightness(0.7);
+      }
+
+      .menu-toggle {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        z-index: 20;
+        background: #fff;
+        border: none;
+        padding: 8px 12px;
+        font-weight: bold;
+        cursor: pointer;
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+  </header>
+
+  <aside id="sidebar"></aside>
+
+  <main id="main-content">
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+  </main>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      const main = document.getElementById("main-content");
+
+      sidebar.classList.toggle("open");
+      main.classList.toggle("dimmed");
+    }
+  </script>
+</body>
+</html>
